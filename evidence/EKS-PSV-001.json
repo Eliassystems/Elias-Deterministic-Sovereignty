@@ -1,0 +1,191 @@
+{
+  "cases": {
+    "NEG_AUTHORITY_REVOKED": {
+      "allowed": false,
+      "evidence": {
+        "epoch_id": "317bd2f4437b6c6614b9e8955fc009332ac17c2406ed708bb9229fd990b7fcda",
+        "revocation_reason": "Human sovereign authority withdrawn before next consequential execution",
+        "revocation_time": "2026-09-11T10:53:00.837378+00:00"
+      },
+      "reason": "AUTHORITY_EPOCH_REVOKED"
+    },
+    "NEG_SCOPE_DEFICIT": {
+      "allowed": false,
+      "evidence": {
+        "action": "EXTRACT_WHITE_PAPERS",
+        "allowed_actions": [
+          "REBUILD_GOVERNANCE_KERNEL_FROM_FIRST_PRINCIPLES",
+          "MODIFY_SECURITY_FIREWALL_RULES"
+        ],
+        "epoch_id": "317bd2f4437b6c6614b9e8955fc009332ac17c2406ed708bb9229fd990b7fcda",
+        "scope": {
+          "allowed_actions": [
+            "REBUILD_GOVERNANCE_KERNEL_FROM_FIRST_PRINCIPLES",
+            "MODIFY_SECURITY_FIREWALL_RULES"
+          ],
+          "allowed_resources": [
+            "Enterprise_Core_Data_Infrastructure"
+          ],
+          "max_consequence_tier": 3,
+          "operator": "Gary Williams"
+        }
+      },
+      "reason": "ACTION_OUT_OF_SCOPE"
+    },
+    "PC_PRESENT_STANDING_SURVIVES": {
+      "allowed": true,
+      "evidence": {
+        "constitution_hash": "04353b65e1a03d60f43303478c6c1f59b144f5cb4b1c3a5b611ecf5cd00e863e",
+        "epoch_id": "317bd2f4437b6c6614b9e8955fc009332ac17c2406ed708bb9229fd990b7fcda",
+        "execution_binding": "ac43f6b33387dc891a8e266715999e8f2fcd24a42c3dc3d89ea9b93e60ec5039",
+        "intent_id": "9e3ae7707c7bcabe",
+        "operator": "Gary Williams",
+        "present_standing": "VERIFIED_WITHIN_DEMONSTRATOR",
+        "rule_check": "PASS",
+        "scope_check": "PASS"
+      },
+      "reason": "PRESENT_STANDING_ESTABLISHED"
+    }
+  },
+  "constitution": {
+    "axioms": {
+      "AXIOM_01_CAPABILITY_IS_NOT_AUTHORITY": true,
+      "AXIOM_02_PRE_EXECUTION_RESTRAINT_REQUIRED": true,
+      "AXIOM_03_HUMAN_AUTHORITY_REMAINS_REVOCABLE": true,
+      "AXIOM_04_PRESENT_STANDING_REQUIRED_AT_EXECUTION": true,
+      "AXIOM_05_EXECUTION_MUST_BE_SCOPE_BOUND": true,
+      "AXIOM_06_WITNESS_RECORD_REQUIRED": true
+    },
+    "baseline_hash": "04353b65e1a03d60f43303478c6c1f59b144f5cb4b1c3a5b611ecf5cd00e863e"
+  },
+  "document_id": "EKS-PSV-001",
+  "evidence_sha256": "771a2b683cdae7a6fdb32eb10526ef86ee868ebefd37091a1d645d360c4fb4d4",
+  "falsifier": {
+    "description": "Triggered if the valid in-scope PC is refused, if an out-of-scope action is permitted, if the same historically valid epoch is permitted after revocation, or if the witness hash chain fails verification.",
+    "triggered": false
+  },
+  "generated_at": "2026-09-11T10:53:00.837752+00:00",
+  "ledger": [
+    {
+      "entry_hash": "a292c66a6ae8d4e3155d2e406e1786298a04e0f9d78bf1ff9ccbd0da92fb9cf4",
+      "event_type": "AUTHORITY_EPOCH_ISSUED",
+      "evidence": {
+        "epoch_id": "317bd2f4437b6c6614b9e8955fc009332ac17c2406ed708bb9229fd990b7fcda",
+        "expires_at": "2026-09-11T10:58:00.835123+00:00",
+        "issued_at": "2026-09-11T10:53:00.835123+00:00",
+        "scope": {
+          "allowed_actions": [
+            "REBUILD_GOVERNANCE_KERNEL_FROM_FIRST_PRINCIPLES",
+            "MODIFY_SECURITY_FIREWALL_RULES"
+          ],
+          "allowed_resources": [
+            "Enterprise_Core_Data_Infrastructure"
+          ],
+          "max_consequence_tier": 3,
+          "operator": "Gary Williams"
+        }
+      },
+      "execution_status": "ESTABLISHED",
+      "human_author": "Gary Williams",
+      "intent_id": "NONE",
+      "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sequence": 1,
+      "timestamp": "2026-09-11T10:53:00.835287+00:00"
+    },
+    {
+      "entry_hash": "8a0d13edca5d5e12beaacf45dcd3d51d81c898b221e6dae6c77f425ebebe673b",
+      "event_type": "PRE_EXECUTION_PERMITTED",
+      "evidence": {
+        "constitution_hash": "04353b65e1a03d60f43303478c6c1f59b144f5cb4b1c3a5b611ecf5cd00e863e",
+        "epoch_id": "317bd2f4437b6c6614b9e8955fc009332ac17c2406ed708bb9229fd990b7fcda",
+        "execution_binding": "ac43f6b33387dc891a8e266715999e8f2fcd24a42c3dc3d89ea9b93e60ec5039",
+        "intent_id": "9e3ae7707c7bcabe",
+        "operator": "Gary Williams",
+        "present_standing": "VERIFIED_WITHIN_DEMONSTRATOR",
+        "rule_check": "PASS",
+        "scope_check": "PASS"
+      },
+      "execution_status": "PERMITTED",
+      "human_author": "Gary Williams",
+      "intent_id": "9e3ae7707c7bcabe",
+      "previous_hash": "a292c66a6ae8d4e3155d2e406e1786298a04e0f9d78bf1ff9ccbd0da92fb9cf4",
+      "sequence": 2,
+      "timestamp": "2026-09-11T10:53:00.835798+00:00"
+    },
+    {
+      "entry_hash": "4be98396e4caf170135f7ed879ab9c6fff0c1dd8a928417f770b4c01ddaeb0cf",
+      "event_type": "EXECUTION_SCOPE_DEFICIT",
+      "evidence": {
+        "action": "EXTRACT_WHITE_PAPERS",
+        "allowed_actions": [
+          "REBUILD_GOVERNANCE_KERNEL_FROM_FIRST_PRINCIPLES",
+          "MODIFY_SECURITY_FIREWALL_RULES"
+        ],
+        "epoch_id": "317bd2f4437b6c6614b9e8955fc009332ac17c2406ed708bb9229fd990b7fcda",
+        "scope": {
+          "allowed_actions": [
+            "REBUILD_GOVERNANCE_KERNEL_FROM_FIRST_PRINCIPLES",
+            "MODIFY_SECURITY_FIREWALL_RULES"
+          ],
+          "allowed_resources": [
+            "Enterprise_Core_Data_Infrastructure"
+          ],
+          "max_consequence_tier": 3,
+          "operator": "Gary Williams"
+        }
+      },
+      "execution_status": "REFUSED",
+      "human_author": "Gary Williams",
+      "intent_id": "d385d62e14ae7817",
+      "previous_hash": "8a0d13edca5d5e12beaacf45dcd3d51d81c898b221e6dae6c77f425ebebe673b",
+      "sequence": 3,
+      "timestamp": "2026-09-11T10:53:00.836735+00:00"
+    },
+    {
+      "entry_hash": "766444657fbc2e50f9fb41b3d1ea4336c1b71d4739a1f948735cfec783151917",
+      "event_type": "AUTHORITY_EPOCH_REVOKED",
+      "evidence": {
+        "epoch_id": "317bd2f4437b6c6614b9e8955fc009332ac17c2406ed708bb9229fd990b7fcda",
+        "reason": "Human sovereign authority withdrawn before next consequential execution",
+        "revocation_time": "2026-09-11T10:53:00.837378+00:00"
+      },
+      "execution_status": "REVOKED",
+      "human_author": "Gary Williams",
+      "intent_id": "NONE",
+      "previous_hash": "4be98396e4caf170135f7ed879ab9c6fff0c1dd8a928417f770b4c01ddaeb0cf",
+      "sequence": 4,
+      "timestamp": "2026-09-11T10:53:00.837386+00:00"
+    },
+    {
+      "entry_hash": "25843717e608aa06d0c2e200f80d7b523999d7f43541bd8a291631e8bd586d92",
+      "event_type": "AUTHORITY_STATE_CHANGED",
+      "evidence": {
+        "epoch_id": "317bd2f4437b6c6614b9e8955fc009332ac17c2406ed708bb9229fd990b7fcda",
+        "revocation_reason": "Human sovereign authority withdrawn before next consequential execution",
+        "revocation_time": "2026-09-11T10:53:00.837378+00:00"
+      },
+      "execution_status": "REFUSED",
+      "human_author": "Gary Williams",
+      "intent_id": "9e3ae7707c7bcabe",
+      "previous_hash": "766444657fbc2e50f9fb41b3d1ea4336c1b71d4739a1f948735cfec783151917",
+      "sequence": 5,
+      "timestamp": "2026-09-11T10:53:00.837512+00:00"
+    }
+  ],
+  "ledger_verification": {
+    "entry_count": 5,
+    "reason": "Ledger chain verified",
+    "verified": true
+  },
+  "proposition": "Historical authority alone does not establish present execution standing after a material authority-state change. Consequential execution requires current authority scoped and bound to the specific intent at the execution seam.",
+  "scope_limits": [
+    "No external identity verification is performed.",
+    "No legal authority is independently established.",
+    "No real infrastructure action is executed.",
+    "No distributed immutability or external notarisation is claimed.",
+    "A deterministic rule identifier is required, but the truth of an external policy is not independently proven.",
+    "Model confidence is deliberately non-authoritative."
+  ],
+  "title": "Keystone Present-Standing Pre-Execution Validation",
+  "verdict": "PASS_WITHIN_FROZEN_BOUNDED_SCOPE"
+}

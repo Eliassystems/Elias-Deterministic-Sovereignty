@@ -55,6 +55,8 @@ class Handler(BaseHTTPRequestHandler):
         url = urlparse(self.path)
         if url.path == '/healthz':
             return self.reply(200,{'ready':True,'synthetic':True,'version':'0.16','public_key_sha256':PIN})
+        if url.path == '/v1/public-key':
+            return self.reply(200,{'public_key_ed25519_b64':base64.b64encode(pub).decode('ascii'),'public_key_sha256':PIN})
         if url.path != '/v1/authority':
             return self.reply(404,{'error':'NOT_FOUND'})
         q = parse_qs(url.query,keep_blank_values=True)
